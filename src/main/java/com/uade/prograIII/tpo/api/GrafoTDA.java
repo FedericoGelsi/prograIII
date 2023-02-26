@@ -1,4 +1,4 @@
-package api;
+package com.uade.prograIII.tpo.api;
 
 public interface GrafoTDA {
 	

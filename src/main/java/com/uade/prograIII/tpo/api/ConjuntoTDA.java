@@ -1,10 +1,10 @@
-package api;
+package com.uade.prograIII.tpo.api;
 
 public interface ConjuntoTDA {
-	public void inicializarConjunto();
-	public boolean pertenece(int elemento);
-	public void agregarElemento(int elemento);
-	public void sacarElemento(int elemento);
-	public int elegir();
-	public boolean conjuntoVacio();
+	void inicializarConjunto();
+	boolean pertenece(int elemento);
+	void agregarElemento(int elemento);
+	void sacarElemento(int elemento);
+	int elegir();
+	boolean conjuntoVacio();
 }

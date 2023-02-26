@@ -1,10 +1,10 @@
-package impl;
+package com.uade.prograIII.tpo.impl;
 
 
-import api.ConjuntoTDA;
-import api.GrafoTDA;
+import com.uade.prograIII.tpo.api.ConjuntoTDA;
+import com.uade.prograIII.tpo.api.GrafoTDA;
 
-public class GrafoLA implements GrafoTDA{
+public class GrafoLA implements GrafoTDA {
 
 	
 	class NodoArista {

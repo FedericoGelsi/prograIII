@@ -1,9 +1,9 @@
-package ejecucion;
+package com.uade.prograIII.tpo.ejecucion;
 
-import api.ConjuntoTDA;
-import api.GrafoTDA;
-import impl.ConjuntoTA;
-import impl.GrafoMA;
+import com.uade.prograIII.tpo.api.ConjuntoTDA;
+import com.uade.prograIII.tpo.api.GrafoTDA;
+import com.uade.prograIII.tpo.impl.ConjuntoTA;
+import com.uade.prograIII.tpo.impl.GrafoMA;
 
 public class Ejercicio1 {
 
@@ -54,16 +54,15 @@ public class Ejercicio1 {
 	}
 	
 	private static void printConjunto (ConjuntoTDA conjunto, String tipo) {
-		
+
 		if (conjunto.conjuntoVacio()) {
-			System.out.println("Conjunto Vacio");}
-		
-		else
-		
-		while(!conjunto.conjuntoVacio()) {
-			int vertice = conjunto.elegir();
-			System.out.println(tipo+": "+ vertice);
-			conjunto.sacarElemento(vertice);
+			System.out.println("Conjunto Vacio");
+		} else {
+			while (!conjunto.conjuntoVacio()) {
+				int vertice = conjunto.elegir();
+				System.out.println(tipo + ": " + vertice);
+				conjunto.sacarElemento(vertice);
+			}
 		}
 	}
 		
@@ -160,7 +159,7 @@ public class Ejercicio1 {
 		ConjuntoTDA vertices = new ConjuntoTA(); // creamos e inicializamos connjunto para almacenar los verticies del grafo
 		vertices.inicializarConjunto();
 		vertices = grafo.Vertices(); // obtenemos vertices del grafo
-		ConjuntoTDA copiaV = new ConjuntoTA();
+		ConjuntoTDA copiaV;
 		copiaV= vertices;
 		
 		while (!copiaV.conjuntoVacio()) {

@@ -1,13 +1,20 @@
-package impl;
+package com.uade.prograIII.tpo.impl;
 
-import api.ConjuntoTDA;
+import com.uade.prograIII.tpo.api.ConjuntoTDA;
 
 public class ConjuntoLD implements ConjuntoTDA {
-    
-	  class Nodo {
-	        int info;
-	        Nodo sig;
-	    }
+
+@Override
+public void agregarElemento(int elemento) {
+
+	// Verifica que x no este en el conjunto
+	if (this. pertenece (elemento)) {
+		Nodo aux = new Nodo();
+	aux. info = elemento;
+	aux. sig = c;
+	c=aux;
+	}
+}
 	
 	Nodo c;
 	  
@@ -31,18 +38,10 @@ public boolean pertenece(int elemento) {
 
 }
 
-
-@Override
-public void agregarElemento(int elemento) {
-
-	// Verifica que x no este en el conjunto 
-	if (this. pertenece (elemento)) {
-	Nodo aux = new Nodo ();
-	aux. info = elemento;
-	aux. sig = c;
-	c=aux;
+	static class Nodo {
+		int info;
+		Nodo sig;
 	}
-}
 	
 	
 
