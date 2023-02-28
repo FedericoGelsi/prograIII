@@ -15,10 +15,10 @@ El trabajo se puede realizar en grupo de hasta 2 personas o individual.
 Usted va a recibir la _Clase_ `Grafo` en Java y deberá implementar 3(tres) de los siguientes algoritmos:
 
 - [ ] Algoritmo Breadth-First Search (BFS)
-- [ ] Algoritmo Depth-First Search (DFS)
+- [x] Algoritmo Depth-First Search (DFS)
 - [ ] Algoritmo de Prim
-- [ ] Algoritmo de Kruskal
-- [ ] Algoritmo de Dijsktra
+- [x] Algoritmo de Kruskal
+- [x] Algoritmo de Dijkstra
 - [ ] Algoritmo de Floyd
 
 Tenga en cuenta la representación del grafo (dinámica o estática) para la implementación de los algoritmos elegidos.
