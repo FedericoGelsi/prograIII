@@ -1,4 +1,4 @@
-package com.uade.prograIII.tpo.ejecucion;
+package com.uade.prograIII.tpo.ejercitacion;
 
 public class Fibonacci {
     public int fibonacci(int n){

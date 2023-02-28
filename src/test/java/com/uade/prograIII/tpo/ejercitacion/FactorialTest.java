@@ -1,4 +1,4 @@
-package com.uade.prograIII.tpo.ejecucion;
+package com.uade.prograIII.tpo.ejercitacion;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

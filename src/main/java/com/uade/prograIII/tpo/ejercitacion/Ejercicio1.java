@@ -1,4 +1,4 @@
-package com.uade.prograIII.tpo.ejecucion;
+package com.uade.prograIII.tpo.ejercitacion;
 
 import com.uade.prograIII.tpo.api.ConjuntoTDA;
 import com.uade.prograIII.tpo.api.GrafoTDA;
