@@ -32,7 +32,7 @@ class DijkstraTest {
     @Test
     void search_ShouldWorkAsExpected() {
         // Arrange
-        Integer[] expected = {0, 2, 0, 4, 0, 0};
+        Integer[] expected = {0, 25, 35, 30, 10, 5};
         // Act
         Integer[] actual = uut.search(grafo, 0);
         // Assert
