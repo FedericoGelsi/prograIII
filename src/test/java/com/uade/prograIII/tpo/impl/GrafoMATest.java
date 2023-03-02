@@ -17,13 +17,6 @@ class GrafoMATest {
     @Test
     void imprimirMatriz() {
         // Arrange
-        uut.agregarVertice(1);
-        uut.agregarVertice(2);
-        uut.agregarVertice(3);
-        uut.agregarVertice(4);
-        uut.agregarVertice(5);
-        uut.agregarVertice(6);
-        uut.agregarVertice(6);
         uut.agregarArista(1,6,5);
         uut.agregarArista(1,5,10);
         uut.agregarArista(1,3,40);
