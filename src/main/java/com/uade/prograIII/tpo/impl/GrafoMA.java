@@ -1,77 +1,58 @@
 package com.uade.prograIII.tpo.impl;
 
 
-import com.uade.prograIII.tpo.api.ConjuntoTDA;
 import com.uade.prograIII.tpo.api.GrafoTDA;
 
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * The type Grafo ma.
+ */
 public class GrafoMA implements GrafoTDA {
-	static int n = 100;
-	int [][] MAdy;
-	int [] Etiqs;
-	int cantNodos;
-	
-	public void InicializarGrafo(){
-		MAdy = new int [n][n];
-		Etiqs = new int [n];
-		cantNodos = 0;
-	}
-	
-	public void AgregarVertice(int v) {
-		Etiqs[cantNodos] = v;
-		for(int i = 0; i <= cantNodos; i++ ) {
-			MAdy[cantNodos][i] = 0;
-			MAdy[i][cantNodos] = 0;
+
+	private final int[][] matrizAdyacencia;
+	private List<Integer> vertices;
+
+	// Constructor
+	public GrafoMA(int numVertices) {
+		matrizAdyacencia = new int[numVertices][numVertices];
+		vertices = new ArrayList<>();
+		// Inicializar todas las entradas de la matriz a cero
+		for (int i = 0; i < numVertices; i++) {
+			vertices.add(i);
+			for (int j = 0; j < numVertices; j++) {
+				matrizAdyacencia[i][j] = 0;
+			}
 		}
-		cantNodos++;
 	}
-	
-	private int Vert2Indice(int v) {
-		int i = cantNodos-1;
-		while(i >= 0 && Etiqs[i] !=  v)
-			i--;
-		return i;
+
+	@Override
+	public void agregarArista(int origen, int destino, int peso) {
+		matrizAdyacencia[origen][destino] = peso;
 	}
-	
-	public void EliminarVertice(int v) {
-		int ind = Vert2Indice(v);
-		for(int i = 0; i < cantNodos; i++)
-			MAdy [i][ind] = MAdy [i][cantNodos-1];
-		for(int i = 0; i < cantNodos; i++)
-			MAdy [ind][i] = MAdy [cantNodos-1][i];
-		Etiqs[ind] = Etiqs[cantNodos-1];
-		cantNodos--;
+
+	@Override
+	public void eliminarArista(int origen, int destino) {
+		if (matrizAdyacencia[origen][destino] == matrizAdyacencia[destino][origen]) {
+			matrizAdyacencia[destino][origen] = 0;
+		}
+		matrizAdyacencia[origen][destino] = 0;
 	}
-	
-	public void AgregarArista(int v1, int v2, int peso) {
-		int o = Vert2Indice(v1);
-		int d = Vert2Indice(v2);
-		MAdy[o][d] = peso;
+
+	@Override
+	public List<Integer> vertices() {
+		return vertices;
 	}
-	
-	public void EliminarArista(int v1, int v2) {
-		int o = Vert2Indice(v1);
-		int d = Vert2Indice(v2);
-		MAdy[o][d] = 0;
+
+	@Override
+	public boolean existeArista(int origen, int destino) {
+		return matrizAdyacencia[origen][destino] != 0;
 	}
-	
-	public int PesoArista(int v1, int v2) {
-		int o = Vert2Indice(v1);
-		int d = Vert2Indice(v2);
-		return MAdy[o][d];
-	}
-	
-	public ConjuntoTDA Vertices() {
-		ConjuntoTDA Vert = new ConjuntoTA();
-		Vert.inicializarConjunto();
-		for(int i=0; i < cantNodos; i++)
-			Vert.agregarElemento(Etiqs[i]);
-		return Vert;
-	}
-	
-	public boolean ExisteArista(int v1, int v2) {
-		int o = Vert2Indice(v1);
-		int d = Vert2Indice(v2);
-		return (MAdy[o][d] != 0);
+
+	@Override
+	public int pesoArista(int origen, int destino) {
+		return matrizAdyacencia[origen][destino];
 	}
 
 }

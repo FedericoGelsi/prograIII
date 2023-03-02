@@ -1,21 +1,51 @@
 package com.uade.prograIII.tpo.api;
 
+import java.util.List;
+
+/**
+ * The interface Grafo tda.
+ */
 public interface GrafoTDA {
-	
-	void InicializarGrafo();
-	// siempre que el grafo esté inicializado y no exista el nodo
-	void AgregarVertice(int v);
-	// siempre que el grafo esté inicializado y exista el nodo
-	void EliminarVertice(int v);
-	// siempre que el grafo esté inicializado
-	ConjuntoTDA Vertices();
-	// siempre que el grafo esté inicializado, no exista la arista, pero existan ambos nodos
-	void AgregarArista(int v1, int v2, int peso);
-	// siempre que el grafo esté inicializado y exista la arista
-	void EliminarArista(int v1, int v2);
-	// siempre que el grafo esté inicializado y existan los nodos
-	boolean ExisteArista(int v1, int v2);
-	// siempre que el grafo esté inicializado y exista la arista
-	int PesoArista(int v1, int v2);
+	/**
+	 * Agregar arista.
+	 *
+	 * @param origen  the origen
+	 * @param destino the destino
+	 * @param peso    the peso
+	 */
+	void agregarArista(int origen, int destino, int peso);
+
+	/**
+	 * Eliminar arista.
+	 *
+	 * @param origen  the origen
+	 * @param destino the destino
+	 */
+	void eliminarArista(int origen, int destino);
+
+	/**
+	 * Vertices set.
+	 *
+	 * @return the set
+	 */
+	List<Integer> vertices();
+
+	/**
+	 * Existe arista boolean.
+	 *
+	 * @param origen  the origen
+	 * @param destino the destino
+	 * @return the boolean
+	 */
+	boolean existeArista(int origen, int destino);
+
+	/**
+	 * Peso arista int.
+	 *
+	 * @param origen  the origen
+	 * @param destino the destino
+	 * @return the int
+	 */
+	int pesoArista(int origen, int destino);
 
 }
