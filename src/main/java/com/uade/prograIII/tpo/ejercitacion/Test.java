@@ -26,9 +26,9 @@ public class Test {
         Bfs bfs = new Bfs();
 
         System.out.println("Camino mas corto: ");
-        System.out.println("Vertices:\t\t\t\t"+ grafo.vertices());
-        System.out.println("Predecesor | Default:\t"+ Arrays.toString(bfs.search(grafo,1)));
-        System.out.println("Dijkstra:\t"+ Arrays.toString(dijkstra.search(grafo, 1)));
+        System.out.println("Vertices:\t"+ grafo.vertices());
+        System.out.println("BFS:\t\t"+ Arrays.toString(bfs.search(grafo,0)));
+        System.out.println("Dijkstra:\t"+ Arrays.toString(dijkstra.search(grafo, 0)));
     }
 
 

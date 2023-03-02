@@ -8,7 +8,6 @@ public class Dijkstra {
         boolean[] visitado = new boolean[cantVertices];
         Integer[] distancia = new Integer[cantVertices];
         for (int i = 0; i < cantVertices; i++) {
-            visitado[i] = false;
             distancia[i] = Integer.MAX_VALUE;
         }
 
