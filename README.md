@@ -2,7 +2,7 @@
 
 **Carácter:** Obligatorio
 
-**Fecha de Entrega:** 02/02/2023 por correo electrónico aguirodriguez@uade.edu.ar.
+**Fecha de Entrega:** 02/02/2023 por correo electrónico a `guirodriguez@uade.edu.ar`.
 
 ## Descripción
 
